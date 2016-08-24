@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BuildConfiguration BuildID="Skylight">
+
+  <ResidentMedia></ResidentMedia>
+
+  <Applications>
+    <Application
+      ID="0"
+      Name="demo"
+      URI="wave:/Application/www.app.com/HandsetTester"
+      UDP="" TCP="1.1.2.1:9000" HTTP=""
+      Login="" Password="" />
+
+    <Application
+      ID="1"
+      Name="AFL"
+      URI="wave:/Application/f/f13"
+      UDP="" TCP="1.2.2.2:9000" HTTP=""
+      Login="" Password="" />
+  </Applications>
+  
+  <PlatformOptions>
+    <Option>DisableSystemTray</Option>
+  </PlatformOptions>
+
+  <ClientOptions>
+    <Option Key="Metro" Value="true" />
+  </ClientOptions>
+  
+</BuildConfiguration>

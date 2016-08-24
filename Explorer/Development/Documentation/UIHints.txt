@@ -1,0 +1,7 @@
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.Options;}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.Button;}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.Button.Text;}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.Button.Icon;}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.MenuItem;}]
+[version=1.0;{target=DeviceFamily.Windows.Phone;type=ApplicationBar.MenuItem.Text;}]

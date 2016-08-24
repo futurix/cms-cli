@@ -1,0 +1,37 @@
+using XXX;
+
+namespace Wave.XXX
+{
+    > public / protected / private constants
+    > static / public / protected / private** automatic or trivial properties
+    > static / public / protected / private** fields
+    > static / public / protected / private** events
+    > multithreading primitives (locks, other sync objects)**
+    
+    > constructor (default, followed by the rest)
+    > constructor-like methods (postponed initialisation, early destruction, etc)
+    > disposal methods
+    
+    > indexers
+    > static / public / protected / private** non-trivial properties
+    
+    > methods
+      > event handlers
+      > event support methods (OnXXX())
+      > various methods
+      > GetHashCode() and other common method overrides
+      > ToString(), ToXXX() methods
+      > partial method stubs
+    
+    > implicit interface implementions*
+    
+    > static operator methods**
+    > static methods**
+    
+	> child classes*
+	
+    > embedded data*
+}
+
+* - enclosed in region(s)
+** - optionally enclosed in region(s)

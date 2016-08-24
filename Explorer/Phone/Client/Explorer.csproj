@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33E35F65-1000-48E9-86A5-525D578282D5}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wave</RootNamespace>
+    <AssemblyName>Wave.Explorer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Explorer.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Wave.Explorer.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;WAVETRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="mscorlib.extensions" />
+    <Reference Include="WriteableBitmapEx">
+      <HintPath>Assemblies\WriteableBitmapEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Zlib">
+      <HintPath>Assemblies\Zlib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FavouritesPage.xaml.cs">
+      <DependentUpon>FavouritesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\System\BackgroundHelper.cs" />
+    <Compile Include="Common\Helpers\IsolatedStorageHelper.cs" />
+    <Compile Include="Common\Helpers\MediaHelper.cs" />
+    <Compile Include="Common\Miscellanea\Constants.cs" />
+    <Compile Include="Platform\Definitions\MapPluginBlockDefinition.cs" />
+    <Compile Include="Services\Cache\CacheDataTemplate.cs" />
+    <Compile Include="Services\Cache\CacheEntityID.cs" />
+    <Compile Include="Services\UIFactory\SocialHelper.cs" />
+    <Compile Include="Platform\Definitions\ApplicationEventsDefinition.cs" />
+    <Compile Include="Platform\Definitions\FrameDefinition.cs" />
+    <Compile Include="Platform\Definitions\Infrastructure\CommonAtomicBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\ScrollingTextBlockDefinition.cs" />
+    <Compile Include="Platform\Interactivity\Signpost.cs" />
+    <Compile Include="Services\UIFactory\TelephonyHelper.cs" />
+    <Compile Include="Common\Helpers\UIHelper.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Network\TCP\TCPSocket.cs" />
+    <Compile Include="Platform\Definitions\ContentReference.cs" />
+    <Compile Include="Platform\Definitions\Infrastructure\HintsDictionary.cs" />
+    <Compile Include="Platform\Definitions\MediaMetaData.cs" />
+    <Compile Include="Services\Cache\CacheHelper.cs" />
+    <Compile Include="Services\Cache\CacheStoreIndices.cs" />
+    <Compile Include="Services\Cache\DB\CacheDataContext.cs" />
+    <Compile Include="Services\Cache\DB\DBCacheRecord.cs" />
+    <Compile Include="Services\Cache\DB\DBCacheStore.cs" />
+    <Compile Include="Services\Cache\File\FileCacheRecord.cs" />
+    <Compile Include="Services\Cache\File\FileCacheStore.cs" />
+    <Compile Include="Services\Cache\Interfaces\ICacheRecord.cs" />
+    <Compile Include="Services\Cache\Interfaces\ICacheStore.cs" />
+    <Compile Include="Services\Cache\CacheStore.cs" />
+    <Compile Include="Services\Settings\ResidentMediaManager.cs" />
+    <Compile Include="Services\Download\DownloadManager.cs" />
+    <Compile Include="Services\Infrastructure\PlatformExtensions.cs" />
+    <Compile Include="Services\Navigation\RequestManager.cs" />
+    <Compile Include="Services\System.cs" />
+    <Compile Include="Services\System\LocationObserver.cs" />
+    <Compile Include="Services\UIFactory.cs" />
+    <Compile Include="Services\UIFactory\BrowserHelper.cs" />
+    <Compile Include="UI\Infrastructure\RenderingHints.cs" />
+    <Compile Include="UI\PanoramaBlock.cs" />
+    <Compile Include="UI\PivotBlock.cs" />
+    <Compile Include="UI\PlaceholderBlock.cs" />
+    <Compile Include="UI\Support\ApplicationBarManager.cs" />
+    <Compile Include="UI\OverlayPlugins\ActionSheet.xaml.cs">
+      <DependentUpon>ActionSheet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ActionSheetBlock.cs" />
+    <Compile Include="UI\ApplicationBarBlock.cs" />
+    <Compile Include="UI\ApplicationBarButtonBlock.cs" />
+    <Compile Include="UI\ApplicationBarMenuItemBlock.cs" />
+    <Compile Include="UI\ApplicationBarOptionsBlock.cs" />
+    <Compile Include="UI\FrameBlock.cs" />
+    <Compile Include="UI\Infrastructure\AtomicBlockBase.cs" />
+    <Compile Include="UI\Infrastructure\ImageBackground.cs" />
+    <Compile Include="UI\Infrastructure\ProgressControl.cs" />
+    <Compile Include="UI\Infrastructure\WaveControl.cs" />
+    <Compile Include="UI\Layouts\ListLayoutPanel.cs" />
+    <Compile Include="UI\Layouts\TableLayout.cs" />
+    <Compile Include="UI\MapPluginBlock.cs" />
+    <Compile Include="UI\NativeMessageBoxBlock.cs" />
+    <Compile Include="UI\NativeMessageBoxBodyBlock.cs" />
+    <Compile Include="UI\NativeMessageBoxButtonBlock.cs" />
+    <Compile Include="UI\OverlayPlugins\EmbeddedBrowser.xaml.cs">
+      <DependentUpon>EmbeddedBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Infrastructure\IMessageEndpoint.cs" />
+    <Compile Include="Common\Collections\AsyncQueue.cs" />
+    <Compile Include="Common\Collections\ByteArrayComparer.cs" />
+    <Compile Include="Common\Collections\SerializableDictionary.cs" />
+    <Compile Include="Common\Collections\StringDictionary.cs" />
+    <Compile Include="Common\Encryption\Blowfish.cs" />
+    <Compile Include="Common\Encryption\CRC32.cs" />
+    <Compile Include="Common\Extensions\Streams.cs" />
+    <Compile Include="Common\Helpers\BinaryHelper.cs" />
+    <Compile Include="Common\Helpers\BuildHelper.cs" />
+    <Compile Include="Common\Helpers\ByteArrayHelper.cs" />
+    <Compile Include="Common\Helpers\CompressionHelper.cs" />
+    <Compile Include="Common\Helpers\DataHelper.cs" />
+    <Compile Include="Common\Helpers\DebugHelper.cs" />
+    <Compile Include="Common\Helpers\ResourceHelper.cs" />
+    <Compile Include="Common\Helpers\StringHelper.cs" />
+    <Compile Include="Common\Helpers\ThreadHelper.cs" />
+    <Compile Include="Common\Helpers\XmlHelper.cs" />
+    <Compile Include="Services\Cache\Interfaces\ICacheable.cs" />
+    <Compile Include="Common\Miscellanea\DataEventHandlers.cs" />
+    <Compile Include="Common\Miscellanea\Pair.cs" />
+    <Compile Include="Common\Miscellanea\PairedList.cs" />
+    <Compile Include="Common\Miscellanea\Spacing.cs" />
+    <Compile Include="Common\Threading\InterlockedBool.cs" />
+    <Compile Include="Common\Threading\InterlockedInt.cs" />
+    <Compile Include="Network\HTTP\HTTPInput.cs" />
+    <Compile Include="Network\HTTP\HTTPTransport.cs" />
+    <Compile Include="Network\TCP\TCPInput.cs" />
+    <Compile Include="Network\TCP\TCPTransport.cs" />
+    <Compile Include="Network\TransportBase.cs" />
+    <Compile Include="Network\TransportInputBase.cs" />
+    <Compile Include="Network\TransportTracker.cs" />
+    <Compile Include="Platform\Interactivity\Actions.cs" />
+    <Compile Include="Platform\Interactivity\ActionSet.cs" />
+    <Compile Include="Platform\Interactivity\ActionSetCollection.cs" />
+    <Compile Include="Platform\Definitions\AtomicBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\BoxLayoutBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\DisplayData.cs" />
+    <Compile Include="Platform\Definitions\FontDefinition.cs" />
+    <Compile Include="Platform\Definitions\GridBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\Infrastructure\BlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\Infrastructure\ContainerBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\Infrastructure\DefinitionBase.cs" />
+    <Compile Include="Platform\Definitions\LayoutTemplates\LayoutTemplateBase.cs" />
+    <Compile Include="Platform\Definitions\LayoutTemplates\TableLayoutTemplate.cs" />
+    <Compile Include="Platform\Definitions\ListBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\PaintStyle.cs" />
+    <Compile Include="Platform\Definitions\PaletteDefinition.cs" />
+    <Compile Include="Platform\Definitions\PaletteEntries.cs" />
+    <Compile Include="Platform\Definitions\SingleSlotBlockDefinition.cs" />
+    <Compile Include="Platform\Definitions\SlotStyleData.cs" />
+    <Compile Include="Platform\Definitions\StyleSet.cs" />
+    <Compile Include="Platform\Messaging\CacheItemID.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\AggregateMessage.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\BlockManager.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\CacheAgent.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\DefAgent.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\Layout.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\MediaAgent.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\MessageOut.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\NaviAgent.cs" />
+    <Compile Include="Platform\Messaging\Identifiers\UserManager.cs" />
+    <Compile Include="Platform\Messaging\Message\BinaryField.cs" />
+    <Compile Include="Platform\Messaging\Message\Infrastructure\BinaryFieldBase.cs" />
+    <Compile Include="Platform\Messaging\Message\BooleanField.cs" />
+    <Compile Include="Platform\Messaging\Message\ByteField.cs" />
+    <Compile Include="Platform\Messaging\Message\DateTimeField.cs" />
+    <Compile Include="Platform\Messaging\Message\DoubleField.cs" />
+    <Compile Include="Platform\Messaging\Message\Infrastructure\FieldExtensions.cs" />
+    <Compile Include="Platform\Messaging\Message\FieldList.cs" />
+    <Compile Include="Platform\Messaging\FieldListNavigator.cs" />
+    <Compile Include="Platform\Messaging\Message\Infrastructure\FieldTypes.cs" />
+    <Compile Include="Platform\Messaging\Message\Infrastructure\IFieldBase.cs" />
+    <Compile Include="Platform\Messaging\Message\Int16Field.cs" />
+    <Compile Include="Platform\Messaging\Message\Int32Field.cs" />
+    <Compile Include="Platform\Messaging\Message\Infrastructure\IntegralFieldBase.cs" />
+    <Compile Include="Platform\Messaging\Message\LongBinaryField.cs" />
+    <Compile Include="Platform\Messaging\Message\StringField.cs" />
+    <Compile Include="Platform\Messaging\Message\WaveMessage.cs" />
+    <Compile Include="Common\Miscellanea\WaveApplication.cs" />
+    <Compile Include="Platform\Messaging\WaveMessageAssembler.cs" />
+    <Compile Include="Platform\Messaging\WaveServerComponent.cs" />
+    <Compile Include="Services\Cache.cs" />
+    <Compile Include="Services\Settings.cs" />
+    <Compile Include="Services\Core.cs" />
+    <Compile Include="Services\Definitions.cs" />
+    <Compile Include="Services\Downloads.cs" />
+    <Compile Include="Services\Navigation.cs" />
+    <Compile Include="Services\Navigation\NodeData.cs" />
+    <Compile Include="Services\Network.cs" />
+    <Compile Include="Services\Authentication.cs" />
+    <Compile Include="UI\AtomicBlock.cs" />
+    <Compile Include="UI\BoxLayoutBlock.cs" />
+    <Compile Include="UI\GridBlock.cs" />
+    <Compile Include="UI\Helpers\TransitionHelper.cs" />
+    <Compile Include="UI\Infrastructure\BlockBase.cs" />
+    <Compile Include="UI\Infrastructure\ContainerBlock.cs" />
+    <Compile Include="UI\Infrastructure\IOverlayPlugin.cs" />
+    <Compile Include="UI\Infrastructure\RendererBase.cs" />
+    <Compile Include="UI\ListBlock.cs" />
+    <Compile Include="UI\Node.cs" />
+    <Compile Include="UI\Renderers\ImageRenderer.cs" />
+    <Compile Include="UI\Renderers\TextEntryRenderer.cs" />
+    <Compile Include="UI\Renderers\TextRenderer.cs" />
+    <Compile Include="UI\ScrollingTextBlock.cs" />
+    <Compile Include="UI\SingleSlotBlock.cs" />
+    <Compile Include="UI\Support\ContentReferenceRegistrar.cs" />
+    <Compile Include="UI\Support\SignpostedDataRegistrar.cs" />
+    <Compile Include="UI\Support\WaveStateManager.cs" />
+    <Compile Include="UI\Support\SystemTrayManager.cs" />
+    <Compile Include="UI\SystemTrayBlock.cs" />
+    <Compile Include="UI\TabBarBlock.cs" />
+    <Compile Include="UI\TabBarButtonBlock.cs" />
+    <Compile Include="UI\View.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BuildConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Resources\Icons\addtofavs.png" />
+    <Content Include="Resources\Icons\back.png" />
+    <Content Include="Resources\Icons\camera.png" />
+    <Content Include="Resources\Icons\cancel.png" />
+    <Content Include="Resources\Icons\check.png" />
+    <Content Include="Resources\Icons\delete.png" />
+    <Content Include="Resources\Icons\download.png" />
+    <Content Include="Resources\Icons\edit.png" />
+    <Content Include="Resources\Icons\email.png" />
+    <Content Include="Resources\Icons\favs.png" />
+    <Content Include="Resources\Icons\ff.png" />
+    <Content Include="Resources\Icons\folder.png" />
+    <Content Include="Resources\Icons\minus.png" />
+    <Content Include="Resources\Icons\new.png" />
+    <Content Include="Resources\Icons\next.png" />
+    <Content Include="Resources\Icons\pause.png" />
+    <Content Include="Resources\Icons\play.png" />
+    <Content Include="Resources\Icons\question.png" />
+    <Content Include="Resources\Icons\refresh.png" />
+    <Content Include="Resources\Icons\rew.png" />
+    <Content Include="Resources\Icons\save.png" />
+    <Content Include="Resources\Icons\search.png" />
+    <Content Include="Resources\Icons\settings.png" />
+    <Content Include="Resources\Icons\share.png" />
+    <Content Include="Resources\Icons\upload.png" />
+    <Content Include="Resources\Icons\video.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="FavouritesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\OverlayPlugins\ActionSheet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\OverlayPlugins\EmbeddedBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\UDP\" />
+    <Folder Include="Resources\Embedded\" />
+    <Folder Include="Resources\Media\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundAgent\BackgroundAgent.csproj">
+      <Project>{EEDB5090-2DB2-4170-A60A-4CA3A9BEFE68}</Project>
+      <Name>BackgroundAgent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <Target Name="BeforeBuild">
+    <ItemGroup>
+      <EmbeddedMediaPath Include="..\..\Build\Media\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(EmbeddedMediaPath)" DestinationFolder="Resources\Embedded" />
+    <ItemGroup>
+      <Content Include="Resources\Embedded\*.*" />
+      <Content Include="Resources\Media\*.*" />
+    </ItemGroup>
+  </Target>
+  <ProjectExtensions />
+</Project>

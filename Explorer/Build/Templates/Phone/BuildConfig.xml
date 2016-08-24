@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BuildConfiguration BuildID="@@WPPRODUCTSHORTNAME@@-WP7-@@WPPRODUCTVER@@">
+
+  <ResidentMedia>@@WPRESIDENTMEDIA@@</ResidentMedia>
+  
+  <Applications>
+    <Application
+      ID="0"
+      Name="@@WPPRODUCT@@"
+      URI="@@WPAPPURI@@"
+      UDP="@@WPUDPSERVER@@" TCP="@@WPTCPSERVER@@" HTTP="@@WPHTTPSERVER@@"
+      Login="" Password="" />
+  </Applications>
+  
+  <PlatformOptions>
+    
+@@WPPLATFORMOPTIONS@@
+  </PlatformOptions>
+
+  <ClientOptions>
+  	
+@@WPCLIENTOPTIONS@@
+  </ClientOptions>
+  
+</BuildConfiguration>

@@ -1,0 +1,27 @@
+Following comments have special meaning in Explorer# source code:
+
+//HACK
+  (normal priority)
+  Bad code that should be rewritten.
+
+//IMPLEMENT
+  (normal priority)
+  Used to mark areas that still have to be implemented.
+
+//SHITE
+  (high priority)
+  Horrible code that should be fixed ASAP and preferably not commited to 
+  source control at all.
+
+//TODO
+  (normal priority) 
+  Normal "to do".
+
+//TPK
+  (low priority)
+  Workaround/hack to support certain things that could have been implemented better 
+  but had to be done differently to support quirks of the other clients (basically
+  things that Java client does wrong ;-) or iPhone client).
+
+HACK and TODO comments are automatically supported by Visual Studio. The rest
+should be added by you! (with priority icons as noted in brackets above)

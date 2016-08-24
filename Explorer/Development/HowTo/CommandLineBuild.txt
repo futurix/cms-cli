@@ -1,0 +1,8 @@
+1. Open Command Prompt with administrative privileges.
+2. Execute:
+   call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\vcvars32.bat"
+3. Navigate to a folder of required project (phone or desktop).
+4. Execute:
+   MSBuild /p:Configuration=Release Explorer.csproj
+
+Done!

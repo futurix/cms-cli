@@ -1,0 +1,14 @@
+name: Custom Filters
+desc: Custom filters by Alex Frost
+
+def: include
+
+f: \.suo$
+f: \.csproj.user$
+
+d: \\\.svn$
+d: \\\Bin$
+d: \\\Debug$
+d: \\\Release$
+d: \\\bin$
+d: \\\obj$

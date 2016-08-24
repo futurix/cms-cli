@@ -1,0 +1,10 @@
+Explorer/Build/Bonding/*
+Explorer/Development/ThirdParty/Phone/*
+*.suo
+Explorer/Phone/packages/*/*
+Explorer/Phone/Client/obj/*
+Explorer/Phone/Client/Bin/*
+Explorer/Phone/BackgroundAgent/Bin/*
+Explorer/Phone/BackgroundAgent/obj/*
+Explorer/Phone/Client/Assemblies/*
+Explorer/Build/Tools/*.exe
